@@ -19,16 +19,16 @@ public class fileParser {
         return System.getProperty("user.dir") + "\\databaseFiles\\";
     }
 
-    public HashMap<Card, Integer> parseCards() {
+    public static HashMap<Card, Integer> parseCards() {
 
         return null;
     }
 
-    public ArrayList<Card> parseCardsOnMarket() {
+    public static ArrayList<Card> parseCardsOnMarket() {
         return null;
     }
 
-    public ArrayList<Player> parsePlayers() {
+    public static ArrayList<Player> parsePlayers() {
         return null;
     }
 
