@@ -1,0 +1,22 @@
+COMMON
+	Yamcha 9001
+	Krillen 100
+	Chopper 100
+
+RARE
+	Android18 50
+
+EPIC
+	Android_17 25 
+	Doctor_Gero 25
+
+LEGENDARY
+	Final_Form_Freiza 10
+	Cell 10
+	Kid_Buu 10
+
+UNIQUE
+	SSGSS_Goku 1
+	SSGSS_Vegeta 1
+	Whis 1
+	Berus 1
