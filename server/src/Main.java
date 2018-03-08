@@ -4,6 +4,7 @@ import myClasses.Player;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Map;
 
 public class Main {
 
@@ -16,6 +17,13 @@ public class Main {
         /* Setting Up Data Sets */
         setupDataSets();
 
+        for(Map.Entry<Card, Integer> entry : cardManager.entrySet()) {
+            Card tempCard = entry.getKey();
+            Integer quantity = entry.getValue();
+
+            System.out.println(tempCard);
+            System.out.println("Quantity: " + quantity + "\n");
+        }
 
     }
 

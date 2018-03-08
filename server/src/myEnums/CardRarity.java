@@ -2,10 +2,13 @@ package myEnums;
 
 public enum CardRarity {
 
-    COMMON(10), RARE(30), EPIC(50), LEGENDARY(100), UNIQUE(300);
+    COMMON(10.00), RARE(30.00), EPIC(50.00), LEGENDARY(100.00), UNIQUE(300.00);
 
-    int rarityValue;
-    CardRarity(int value) {
+    double rarityValue;
+    CardRarity(double value) {
         rarityValue = value;
     }
+
+    public double getRarityValue() { return rarityValue; }
+
 }

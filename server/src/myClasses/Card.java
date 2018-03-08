@@ -12,13 +12,14 @@ public class Card {
     private CardRarity rarity;
 
 
-    public Card(double value, String name, CardRarity rare) {
-        setOriginalValue(value);
+    public Card(String name, CardRarity rare) {
         setName(name);
-        setRarity(rare);
+        setRarity(rare); //Sets original value too
     }
 
-
+    public String toString() {
+        return "Card Name: " + getName() + "\nCard Rarity: " + rarity.name() + "\nOriginal Value:" + getOriginalValue();
+    }
 
 
 
@@ -47,5 +48,6 @@ public class Card {
 
     private void setRarity(CardRarity rarity) {
         this.rarity = rarity;
+        originalValue = rarity.getRarityValue();
     }
 }

@@ -1,85 +1,78 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<common_cards>
-	<card>
-		<name> Yamcha </name>
-		<quantiy> 9001 </quantity>
-	</card>
+<tradingCards>
+	<common_cards>
+		<card>
+			<name>Yamcha</name>
+			<quantity>9001</quantity>
+		</card>
 
-	<card>
-		<name> Krillen </name>
-		<quantiy> 100 </quantity>
-	</card>
+		<card>
+			<name>Krillen</name>
+			<quantity>100</quantity>
+		</card>
 
-	<card>
-		<name> Chopper </name>
-		<quantiy> 100 </quantity>
-	</card>
+		<card>
+			<name>Chopper</name>
+			<quantity>100</quantity>
+		</card>
+	</common_cards>
 
-</common_cards>
+	<rare_cards>
+		<card>
+			<name>Android 18</name>
+			<quantity>50</quantity>
+		</card>
+	</rare_cards>
 
-<rare_cards>
+	<epic_cards>
+		<card>
+			<name>Android 17</name>
+			<quantity>25</quantity>
+		<card>
 
-	<card>
-		<name> Android 18 </name>
-		<quantiy> 50 </quantity>
-	</card>
+		</card>
+			<name>Doctor Gero</name>
+			<quantity>25</quantity>
+		</card>
+	</epic_cards>
 
-</rare_cards>
+	<legendary_cards>
+		<card>
+			<name>Final Form Freiza</name>
+			<quantity>10</quantity>
+		</card>
 
-<epic_cards>
+		<card>
+			<name>Perfect Cell</name>
+			<quantity>10</quantity>
+		</card>
 
-	<card>
-		<name> Android 17 </name>
-		<quantiy> 25 </quantity>
-	<card>
+		<card>
+			<name>Kid Buu</name>
+			<quantity>10</quantity>
+		</card>
+	</legendary_cards>
 
-	</card>
-		<name> Doctor Gero </name>
-		<quantiy> 25 </quantity>
-	</card>
+	<unique_cards>
+		<card>
+			<name>SSGSS Goku</name>
+			<quantity>1</quantity>
+		</card>
 
-</epic_cards>
+		<card>
+			<name>SSGSS Vegeta</name>
+			<quantity>1</quantity>
+		</card>
 
-<legendary_cards>
-	
-	<card>
-		<name> Final Form Freiza </name>
-		<quantiy> 10 </quantity>
-	</card>
+		<card>
+			<name>Whis</name>
+			<quantity>1</quantity>
+		</card>
 
-	<card>
-		<name> Perfect Cell </name>
-		<quantiy> 10 </quantity>
-	</card>
-
-	<card>
-		<name> Kid Buu </name>
-		<quantiy> 10 </quantity>
-	</card>
-
-</legendary_cards>
-
-<unique_cards>
-
-	<card>
-		<name> SSGSS Goku </name>
-		<quantiy> 1 </quantity>
-	</card>
-
-	<card>
-		<name> SSGSS Vegeta </name>
-		<quantiy> 1 </quantity>
-	</card>
-
-	<card>
-		<name> Whis </name>
-		<quantiy> 1 </quantity>
-	</card>
-
-	<card>
-		<name> Berus </name>
-		<quantiy> 1 </quantity>
-	</card>
-
-</unique_cards>
+		<card>
+			<name>Berus</name>
+			<quantity>1</quantity>
+		</card>
+	</unique_cards>
+</tradingCards>
