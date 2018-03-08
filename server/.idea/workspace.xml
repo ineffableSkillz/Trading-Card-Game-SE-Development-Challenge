@@ -34,6 +34,21 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="Player.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/myClasses/Player.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="770">
+              <caret line="43" column="0" lean-forward="true" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="method#Player#0;class#Player#0" expanded="false" />
+                <element signature="e#584#585#0" expanded="true" />
+                <element signature="e#627#628#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="CardRarity.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/myEnums/CardRarity.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -44,11 +59,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="fileParser.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="fileParser.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/database/fileParser.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="440">
-              <caret line="31" column="0" lean-forward="true" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+            <state relative-caret-position="0">
+              <caret line="0" column="17" lean-forward="true" selection-start-line="0" selection-start-column="17" selection-end-line="0" selection-end-column="17" />
               <folding>
                 <element signature="e#1073#1074#0" expanded="true" />
                 <element signature="e#1100#1101#0" expanded="true" />
@@ -218,12 +233,12 @@
       <updated>1520446027092</updated>
       <workItem from="1520446034042" duration="2068000" />
       <workItem from="1520448218442" duration="1268000" />
-      <workItem from="1520497421391" duration="614000" />
+      <workItem from="1520497421391" duration="1219000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3950000" />
+    <option name="totallyTimeSpent" value="4555000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -353,19 +368,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/myClasses/Hasher.java" />
-    <entry file="file://$PROJECT_DIR$/src/myClasses/Player.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="433">
-          <caret line="43" column="0" lean-forward="true" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#Player#0;class#Player#0" expanded="false" />
-            <element signature="e#584#585#0" expanded="true" />
-            <element signature="e#627#628#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="264">
@@ -373,14 +375,6 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/myClasses/Card.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="528">
-          <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -394,13 +388,34 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/database/fileParser.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="31" column="0" lean-forward="true" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+        <state relative-caret-position="0">
+          <caret line="0" column="17" lean-forward="true" selection-start-line="0" selection-start-column="17" selection-end-line="0" selection-end-column="17" />
           <folding>
             <element signature="e#1073#1074#0" expanded="true" />
             <element signature="e#1100#1101#0" expanded="true" />
             <element signature="e#1154#1155#0" expanded="true" />
             <element signature="e#1181#1182#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/myClasses/Card.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="528">
+          <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/myClasses/Player.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="770">
+          <caret line="43" column="0" lean-forward="true" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#Player#0;class#Player#0" expanded="false" />
+            <element signature="e#584#585#0" expanded="true" />
+            <element signature="e#627#628#0" expanded="true" />
           </folding>
         </state>
       </provider>
