@@ -1,22 +1,85 @@
-COMMON
-	Yamcha 9001
-	Krillen 100
-	Chopper 100
+<?xml version="1.0" encoding="UTF-8"?>
 
-RARE
-	Android18 50
+<common_cards>
+	<card>
+		<name> Yamcha </name>
+		<quantiy> 9001 </quantity>
+	</card>
 
-EPIC
-	Android_17 25 
-	Doctor_Gero 25
+	<card>
+		<name> Krillen </name>
+		<quantiy> 100 </quantity>
+	</card>
 
-LEGENDARY
-	Final_Form_Freiza 10
-	Cell 10
-	Kid_Buu 10
+	<card>
+		<name> Chopper </name>
+		<quantiy> 100 </quantity>
+	</card>
 
-UNIQUE
-	SSGSS_Goku 1
-	SSGSS_Vegeta 1
-	Whis 1
-	Berus 1
+</common_cards>
+
+<rare_cards>
+
+	<card>
+		<name> Android 18 </name>
+		<quantiy> 50 </quantity>
+	</card>
+
+</rare_cards>
+
+<epic_cards>
+
+	<card>
+		<name> Android 17 </name>
+		<quantiy> 25 </quantity>
+	<card>
+
+	</card>
+		<name> Doctor Gero </name>
+		<quantiy> 25 </quantity>
+	</card>
+
+</epic_cards>
+
+<legendary_cards>
+	
+	<card>
+		<name> Final Form Freiza </name>
+		<quantiy> 10 </quantity>
+	</card>
+
+	<card>
+		<name> Perfect Cell </name>
+		<quantiy> 10 </quantity>
+	</card>
+
+	<card>
+		<name> Kid Buu </name>
+		<quantiy> 10 </quantity>
+	</card>
+
+</legendary_cards>
+
+<unique_cards>
+
+	<card>
+		<name> SSGSS Goku </name>
+		<quantiy> 1 </quantity>
+	</card>
+
+	<card>
+		<name> SSGSS Vegeta </name>
+		<quantiy> 1 </quantity>
+	</card>
+
+	<card>
+		<name> Whis </name>
+		<quantiy> 1 </quantity>
+	</card>
+
+	<card>
+		<name> Berus </name>
+		<quantiy> 1 </quantity>
+	</card>
+
+</unique_cards>
