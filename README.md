@@ -47,3 +47,7 @@ Project Setup:
 - Created Accept Thread \w Validation methods (need to setup client side before I can progress)
 - Accept Thread can check to see if a user has an account, given the correct credentials
 
+### Hour 7:13 - Client 0
+- Client program started
+- Client can connect to server and authenticate
+- **need to find a way to transfer player object**
