@@ -1,6 +1,7 @@
 package myClasses;
 
 import java.util.HashMap;
+import java.util.Map;
 import java.util.Objects;
 
 public class Player {
@@ -8,17 +9,39 @@ public class Player {
     private String username;
     private int password;
 
-    private HashMap<Card, Integer> ownedCards;
+    private HashMap<Card, Integer> ownedCards = null;
 
     private double money = 0.0;
 
 
-    public Player(String usr, String pass, HashMap<Card, Integer> cardList, double dosh) {
-        setUsername(usr);
-        setPassword(passwordHash(pass));
-        setOwnedCards(cardList);
-        incMoney(dosh);
+    public Player(String usr, Integer pass, double dosh, HashMap<Card, Integer> cardList) {
 
+        username = usr;
+        password = pass;
+        money = dosh;
+        ownedCards = cardList;
+
+    }
+
+    public String toString() {
+        return "Username: " + getUsername() +
+                "\nMoney:" + getMoney() +
+                "\nOwnedCards:\n" + getCardsToString();
+    }
+
+    public String getCardsToString() {
+
+        StringBuilder sb = new StringBuilder();
+
+        for(Map.Entry<Card, Integer> entry : ownedCards.entrySet()) {
+            Card tempCard = entry.getKey();
+            Integer quantity = entry.getValue();
+
+            sb.append(tempCard.toString() + "\nNoOwned: " + quantity);
+
+        }
+
+        return sb.toString();
     }
 
     /**

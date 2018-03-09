@@ -25,6 +25,9 @@ public class Main {
             System.out.println("Quantity: " + quantity + "\n");
         }
 
+        for(Player p : playerManager)
+            System.out.println(p);
+
     }
 
     /**
