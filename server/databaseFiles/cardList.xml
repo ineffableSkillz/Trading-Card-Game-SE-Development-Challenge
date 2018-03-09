@@ -6,73 +6,34 @@
 			<name>Yamcha</name>
 			<quantity>9001</quantity>
 		</card>
-
-		<card>
-			<name>Krillen</name>
-			<quantity>100</quantity>
-		</card>
-
-		<card>
-			<name>Chopper</name>
-			<quantity>100</quantity>
-		</card>
 	</common_cards>
 
 	<rare_cards>
 		<card>
-			<name>Android 18</name>
+			<name>Yamcha</name>
 			<quantity>50</quantity>
 		</card>
 	</rare_cards>
 
 	<epic_cards>
 		<card>
-			<name>Android 17</name>
-			<quantity>25</quantity>
-		<card>
-
-		</card>
-			<name>Doctor Gero</name>
+			<name>Yamcha</name>
 			<quantity>25</quantity>
 		</card>
 	</epic_cards>
 
 	<legendary_cards>
 		<card>
-			<name>Final Form Freiza</name>
-			<quantity>10</quantity>
-		</card>
-
-		<card>
-			<name>Perfect Cell</name>
-			<quantity>10</quantity>
-		</card>
-
-		<card>
-			<name>Kid Buu</name>
+			<name>Yamcha</name>
 			<quantity>10</quantity>
 		</card>
 	</legendary_cards>
 
 	<unique_cards>
 		<card>
-			<name>SSGSS Goku</name>
-			<quantity>1</quantity>
-		</card>
-
-		<card>
-			<name>SSGSS Vegeta</name>
-			<quantity>1</quantity>
-		</card>
-
-		<card>
-			<name>Whis</name>
-			<quantity>1</quantity>
-		</card>
-
-		<card>
-			<name>Berus</name>
+			<name>Yamcha</name>
 			<quantity>1</quantity>
 		</card>
 	</unique_cards>
+
 </tradingCards>

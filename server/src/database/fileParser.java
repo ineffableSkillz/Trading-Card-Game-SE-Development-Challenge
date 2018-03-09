@@ -19,6 +19,8 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.LinkedHashMap;
+import java.util.Map;
 
 /**
  * This class is responsible for parsing all files pertaining to:
@@ -244,6 +246,98 @@ public class FileParser {
             e.printStackTrace();
         }
 
+    }
+
+    /**
+     * Used to write all of the cards to the xml file
+     * @param listOfCards HashMap holding of the cards and their quantities
+     */
+    public static void packAllCards(HashMap<Card, Integer> listOfCards) {
+
+        StringBuilder sb = new StringBuilder();
+
+        /* XML Header */
+        sb.append("<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n\n");
+        sb.append("<tradingCards>\n");
+
+        /* Obtaining Card Ranks in Order */
+        LinkedHashMap<CardRarity, ArrayList<Card>> orderedListOfCards =
+                getCardsOrganisedByRarity(listOfCards);
+
+        /* Building up card info */
+        for(Map.Entry<CardRarity, ArrayList<Card>> entry : orderedListOfCards.entrySet()) {
+
+            sb.append("\t" + entry.getKey().getStartXMLRarity() + "\n");
+
+            for(Card card : entry.getValue()) {
+
+                String cardName = card.getName();
+                Integer quantity = listOfCards.get(card);
+
+                sb.append("\t\t<card>\n");
+                    sb.append("\t\t\t<name>" + cardName + "</name>\n");
+                    sb.append("\t\t\t<quantity>" + quantity + "</quantity>\n");
+                sb.append("\t\t</card>\n");
+
+            }
+            sb.append("\t" + entry.getKey().getEndXMLRarity() + "\n\n");
+
+        }
+        sb.append("</tradingCards>");
+
+        /*Writing Info to File*/
+        try(BufferedWriter bw = new BufferedWriter(new FileWriter(getPath() + cardPath))) {
+
+            bw.write(sb.toString());
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    /**
+     * Used by packAllCards() to obtain cards by rarity to preserve the readable format of the .xml document
+     * @param listOfCards Not guaranteed order of cards
+     * @return returnMap Mapping of <CardRarity, ArrayList<Card>>
+     * @see packAllCards
+     */
+    public static LinkedHashMap<CardRarity, ArrayList<Card>> getCardsOrganisedByRarity(HashMap<Card, Integer> listOfCards) {
+
+        ArrayList<Card> commonCardList = new ArrayList<>();
+        ArrayList<Card> rareCardList = new ArrayList<>();
+        ArrayList<Card> epicCardList = new ArrayList<>();
+        ArrayList<Card> legendaryCardList = new ArrayList<>();
+        ArrayList<Card> uniqueCardList = new ArrayList<>();
+
+        for(Map.Entry<Card, Integer> entry : listOfCards.entrySet()) {
+
+            Card tempCard = entry.getKey();
+
+            switch(tempCard.getRarity()) {
+
+                case COMMON:
+                    commonCardList.add(tempCard); break;
+                case RARE:
+                    rareCardList.add(tempCard); break;
+                case EPIC:
+                    epicCardList.add(tempCard); break;
+                case LEGENDARY:
+                    legendaryCardList.add(tempCard); break;
+                case UNIQUE:
+                    uniqueCardList.add(tempCard); break;
+
+            }
+
+        }
+
+        /* Setting Up Returned LinkedHashMap */
+        LinkedHashMap<CardRarity, ArrayList<Card>> returnMap = new LinkedHashMap<>();
+        returnMap.put(CardRarity.COMMON, commonCardList);
+        returnMap.put(CardRarity.RARE, rareCardList);
+        returnMap.put(CardRarity.EPIC, epicCardList);
+        returnMap.put(CardRarity.LEGENDARY, legendaryCardList);
+        returnMap.put(CardRarity.UNIQUE, uniqueCardList);
+        return returnMap;
     }
 
 }

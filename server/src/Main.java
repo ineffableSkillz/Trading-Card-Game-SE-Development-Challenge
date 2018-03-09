@@ -45,6 +45,7 @@ public class Main {
             System.out.println(p);
 
         FileParser.packAllPlayers(playerManager);
+        FileParser.packAllCards(cardManager);
 
     }
 }
