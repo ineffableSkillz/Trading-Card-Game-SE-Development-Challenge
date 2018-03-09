@@ -3,7 +3,7 @@
 ## What's this repo all about?
 This repository will hold the code for my Trading Card Market game which will consist of a central cerver and many clients connecting and trading cards.
 
-The challenge is to create **everything** (including planning) within 24hours, whilst implementing as many good Software Engineering practices, structures (and so on) as possible to push my Software Engineering abilities to the limit!
+The challenge is to create **everything** (including planning) within 24hours, whilst implementing as many good Software Engineering practices, design patterns, javadocs (and so on) as possible to push my Software Engineering abilities to the limit!
 
 ### Hour 1 - Setting Up
 Project Setup: 
