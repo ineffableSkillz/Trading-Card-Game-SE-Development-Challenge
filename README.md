@@ -5,6 +5,18 @@ This repository will hold the code for my Trading Card Market game which will co
 
 The challenge is to create **everything** (including planning) within 24hours, whilst implementing as many good Software Engineering practices, design patterns, javadocs (and so on) as possible to push my Software Engineering abilities to the limit!
 
+## What to expect at the end of the 24 hours?
+This page will contain:
+- A detailed explanation of the project (structure, UML, other diagrams etc.)
+- A demo running via video
+- Setup Instructions
+- A summary of:
+  - Newly learnt Software Engineering techniques
+  - Implemented Software Engineering practices
+  - Un-implemented Software ENgineering Practices 
+  - Security Practices
+
+## Development Timeline
 ### Hour 1 - Setting Up
 Project Setup: 
 - Initialised initial classes
