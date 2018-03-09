@@ -41,3 +41,9 @@ Project Setup:
 ### Hour 5:35 - Saving the Cards
 - Writer for cards has been implemented and tested
 - CardRarity enum updated to aid writing process
+
+### Hour 6:05 - Setting up connection
+- Created SSLServer socket
+- Created Accept Thread \w Validation methods (need to setup client side before I can progress)
+- Accept Thread can check to see if a user has an account, given the correct credentials
+
