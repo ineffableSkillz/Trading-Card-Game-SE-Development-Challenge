@@ -25,3 +25,7 @@ Project Setup:
 - Created appropriate toString-esque methods within Player.class and Card.class
 - Format testing done via command line input
 - Javadocs comments added to all *used* methods in FileParser
+
+### Hour 5:35 - Saving the Cards
+- Writer for cards has been implemented and tested
+- CardRarity enum updated to aid writing process
