@@ -9,8 +9,8 @@ import java.util.Scanner;
 public class Client {
 
     /* Server Information */
-    static int portno = 23456;
-    static String addr = "";
+    static int portno = 34512;
+    static String addr = "192.168.122.1";
 
     /* Socket Stuff */
     static SSLSocket socket = null;
@@ -20,7 +20,7 @@ public class Client {
 
     public static void main(String[] args) {
 
-        getServerIp();
+        //getServerIp();
 
         connectToHost();
 
@@ -34,8 +34,6 @@ public class Client {
 
             String cipherSuits[] = socket.getSupportedCipherSuites(); //{"TLS_RSA_WITH_AES_128_CBC_SHA256"};
             socket.setEnabledCipherSuites(cipherSuits);
-
-            socket.addHandshakeCompletedListener(new MyHandShakeListener());
             socket.setUseClientMode(true);
 
             out = new PrintWriter(socket.getOutputStream(), true);
@@ -43,10 +41,13 @@ public class Client {
 
             /* Credential Validation */
             System.out.println(in.readLine()); //Username
-            out.write(kbd.nextLine());
+            out.println(kbd.nextLine());
 
             System.out.println(in.readLine()); //Password
-            out.write(kbd.nextLine());
+            out.println(kbd.nextLine());
+
+            System.out.println(in.readLine()); //Result
+            out.println("OK");
 
 
         } catch (UnknownHostException e) {
@@ -69,13 +70,5 @@ public class Client {
 
     }
 
-    static class MyHandShakeListener implements HandshakeCompletedListener {
-
-        public void handshakeCompleted(HandshakeCompletedEvent e) {
-            System.out.println("Handshake Successful");
-            System.out.println("Using Cipher Suit: " + e.getCipherSuite());
-
-        }
-    }
 
 }

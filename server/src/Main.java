@@ -54,7 +54,7 @@ public class Main {
         openConnection();
 
         /* Testing */
-        printTests();
+        //printTests();
 
     }
     private static void printTests() {
@@ -156,15 +156,17 @@ public class Main {
             out = new PrintWriter(currentSocket.getOutputStream(), true);
             in = new BufferedReader(new InputStreamReader(currentSocket.getInputStream()));
 
+
             if(isUserKnown(out, in, username, password)) {
 
                 /* Get Player Info */
-
+                out.println("Credentials Accepted. Transferring data now...");
 
             } else {
 
-                out.write("Bad Credentials. You only get one shot because this is a 24hour project");
-                socket.close();
+                out.println("Bad Credentials. You only get one shot because this is a 24hour project");
+                in.readLine();
+                currentSocket.close();
             }
 
         } catch (IOException e) {
@@ -185,10 +187,12 @@ public class Main {
 
         try{
 
+
+
             /* Obtain Username and Password */
-            out.write("Username: ");
+            out.println("Username: ");
             username = in.readLine();
-            out.write("Password: ");
+            out.println("Password: ");
             password = in.readLine();
 
             /* Check if it's valid */
