@@ -3,7 +3,7 @@
 ## What's this repo all about?
 This repository will hold the code for my Trading Card Market game which will consist of a central cerver and many clients connecting and trading cards.
 
-The challenge is to create **everything** (including planning) within 24hours, whilst implementing as many good Software Engineering practices, structures (and so on) as possible to push my Software Engineering abilities to the limit!
+The challenge is to create **everything** (including planning) within 24hours, whilst implementing as many good Software Engineering practices, design patterns, javadocs (and so on) as possible to push my Software Engineering abilities to the limit!
 
 ### Hour 1 - Setting Up
 Project Setup: 
@@ -19,3 +19,9 @@ Project Setup:
 - Altered playerInfo.XML to hold all relevant values
 - XML parser for players has been implemented
 - Removed Bad Code Smell (duplication) in the reader class
+
+### Hour 5 - Saving the Players
+- Creted a packAllPlayers() method in the FileParser class
+- Created appropriate toString-esque methods within Player.class and Card.class
+- Format testing done via command line input
+- Javadocs comments added to all *used* methods in FileParser
