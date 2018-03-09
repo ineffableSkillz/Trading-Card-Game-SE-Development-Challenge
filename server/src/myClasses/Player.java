@@ -69,6 +69,10 @@ public class Player {
         return sb.toString();
     }
 
+    /**
+     * Used by packPlayer() to pack all of the player's cards.
+     * @return Player's cards in .XML format
+     */
     public String packPlayerCards() {
 
         StringBuilder sb = new StringBuilder();
