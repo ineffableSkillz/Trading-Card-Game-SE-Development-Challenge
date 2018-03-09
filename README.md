@@ -19,3 +19,9 @@ Project Setup:
 - Altered playerInfo.XML to hold all relevant values
 - XML parser for players has been implemented
 - Removed Bad Code Smell (duplication) in the reader class
+
+### Hour 5 - Saving the Players
+- Creted a packAllPlayers() method in the FileParser class
+- Created appropriate toString-esque methods within Player.class and Card.class
+- Format testing done via command line input
+- Javadocs comments added to all *used* methods in FileParser
