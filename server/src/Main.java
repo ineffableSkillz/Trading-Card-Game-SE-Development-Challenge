@@ -1,4 +1,4 @@
-import database.fileParser;
+import database.FileParser;
 import myClasses.Card;
 import myClasses.Player;
 
@@ -17,6 +17,22 @@ public class Main {
         /* Setting Up Data Sets */
         setupDataSets();
 
+        /* Testing */
+        printTests();
+
+    }
+
+    /**
+     * Calls appropriate readers to setup the data sets for the server.
+     */
+    private static void setupDataSets() {
+        cardManager = FileParser.parseCards();
+        playerManager = FileParser.parsePlayers();
+        cardMarket = FileParser.parseCardsOnMarket();
+    }
+
+    private static void printTests() {
+
         for(Map.Entry<Card, Integer> entry : cardManager.entrySet()) {
             Card tempCard = entry.getKey();
             Integer quantity = entry.getValue();
@@ -28,14 +44,7 @@ public class Main {
         for(Player p : playerManager)
             System.out.println(p);
 
-    }
+        FileParser.packAllPlayers(playerManager);
 
-    /**
-     * Calls appropriate readers to setup the data sets for the server.
-     */
-    private static void setupDataSets() {
-        cardManager = fileParser.parseCards();
-        playerManager = fileParser.parsePlayers();
-        cardMarket = fileParser.parseCardsOnMarket();
     }
 }

@@ -29,6 +29,10 @@ public class Player {
                 "\nOwnedCards:\n" + getCardsToString();
     }
 
+    /**
+     * Used to obtain in-game information about the player's cards
+     * @return A string containing all information about a player's cards.
+     */
     public String getCardsToString() {
 
         StringBuilder sb = new StringBuilder();
@@ -40,6 +44,51 @@ public class Player {
             sb.append(tempCard.toString() + "\nNoOwned: " + quantity);
 
         }
+
+        return sb.toString();
+    }
+
+    /**
+     * Used to save player state when the server is shut down
+     * @return A string containing all player data to be written to the .XML file.
+     */
+    public String packPlayer() {
+        StringBuilder sb = new StringBuilder();
+
+        sb.append("<player>\n");
+
+        sb.append("\t<username>" + getUsername() + "</username>\n");
+        sb.append("\t<password>" + getPassword() + "</password>\n");
+        sb.append("\t<money>" + getMoney() + "</money>\n");
+        sb.append("\n");
+
+        sb.append("\t" + packPlayerCards());
+
+        sb.append("</player>\n");
+
+        return sb.toString();
+    }
+
+    public String packPlayerCards() {
+
+        StringBuilder sb = new StringBuilder();
+        sb.append("<owned_cards>\n");
+
+        for(Map.Entry<Card, Integer> entry : ownedCards.entrySet()) {
+            Card tempCard = entry.getKey();
+
+            String name = tempCard.getName();
+            String rarity = tempCard.getRarity().name(); //COMMON, RARE etc.
+            Integer quantity = entry.getValue();
+
+            sb.append("\t\t<card>\n");
+            sb.append("\t\t\t<name>" + name + "</name>\n" +
+                        "\t\t\t<rarity>" + rarity + "</rarity>\n" +
+                            "\t\t\t<quantity>" + quantity + "</quantity>\n");
+            sb.append("\t\t</card>\n");
+        }
+
+        sb.append("\t</owned_cards>\n");
 
         return sb.toString();
     }

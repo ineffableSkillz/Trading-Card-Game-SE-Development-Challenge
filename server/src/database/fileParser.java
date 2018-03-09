@@ -13,7 +13,9 @@ import org.xml.sax.SAXException;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
+import java.io.BufferedWriter;
 import java.io.File;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -24,7 +26,10 @@ import java.util.HashMap;
  * - Cards on the market
  * - User Account Information
  */
-public class fileParser {
+public class FileParser {
+
+    static final String cardPath = "cardList.xml";
+    static final String playerPath = "playerInfo.xml";
 
     public static String getPath() {
         return System.getProperty("user.dir") + "\\databaseFiles\\";
@@ -60,12 +65,15 @@ public class fileParser {
 
     }
 
-
+    /**
+     * Parser to read in the available cards from the xml file
+     * @return Map of cards and their quantities
+     */
     public static HashMap<Card, Integer> parseCards() {
 
         HashMap<Card, Integer> returnMap = new HashMap<>();
 
-        Document document = getDocument("cardList.xml");
+        Document document = getDocument(cardPath);
         document.getDocumentElement().normalize();
 
         /* Log Comment */
@@ -106,15 +114,48 @@ public class fileParser {
 
     }
 
+    /**
+     * Used by parseCards() to obtain the correct enum corresponding
+     * to the read card's rarity.
+     * @param str Holds string pertaining to card's rarity
+     * @return CardRarity enum to be set within the card
+     * @see parseCards()
+     */
+    public static CardRarity getRarity(String str) {
+
+        switch(str) {
+
+            case "common_cards":
+                return CardRarity.COMMON;
+            case "rare_cards":
+                return CardRarity.RARE;
+            case "epic_cards":
+                return CardRarity.EPIC;
+            case "legendary_cards":
+                return CardRarity.LEGENDARY;
+            case "unique_cards":
+                return CardRarity.UNIQUE;
+            default:
+                return null;
+
+        }
+
+    }
+
+
     public static ArrayList<Card> parseCardsOnMarket() {
         return null;
     }
 
+    /**
+     * Parser to read in all of the players from the xml file
+     * @return ArrayList of all players
+     */
     public static ArrayList<Player> parsePlayers() {
 
         ArrayList<Player> returnList = new ArrayList<>();
 
-        Document document = getDocument("playerInfo.xml");
+        Document document = getDocument(playerPath);
         document.getDocumentElement().normalize();
 
         /* Log Comment */
@@ -174,23 +215,33 @@ public class fileParser {
         return returnList;
     }
 
-    public static CardRarity getRarity(String str) {
 
-        switch(str) {
 
-            case "common_cards":
-                return CardRarity.COMMON;
-            case "rare_cards":
-                return CardRarity.RARE;
-            case "epic_cards":
-                return CardRarity.EPIC;
-            case "legendary_cards":
-                return CardRarity.LEGENDARY;
-            case "unique_cards":
-                return CardRarity.UNIQUE;
-            default:
-                return null;
+    /* Saving Methods */
 
+    /**
+     * Used to write all of the players to the xml file
+     * @param listOfPlayers ArrayList holding all players
+     */
+    public static void packAllPlayers(ArrayList<Player> listOfPlayers) {
+
+        StringBuilder sb = new StringBuilder();
+
+        sb.append("<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n");
+        sb.append("\n");
+        sb.append("<player_collection>\n");
+
+        for(Player p : listOfPlayers)
+            sb.append(p.packPlayer() + "\n");
+
+        sb.append("</player_collection>");
+
+        try (BufferedWriter bw = new BufferedWriter(new FileWriter(getPath() + playerPath))){
+
+            bw.write(sb.toString());
+
+        } catch (IOException e) {
+            e.printStackTrace();
         }
 
     }
