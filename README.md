@@ -56,3 +56,13 @@ Project Setup:
 - Player object transferred successfully
 - Info is written to a file and re-opened.
 - Spent an hour trying to solve a problem due to a missing 'return'. If time, will try without writing to file
+
+### Hour 8:52 - Managing Individual Connections
+New Threads:
+- CommunicationThread
+- CheckVoide ConnectionThread
+
+New Data Structure:
+- ArrayList<Player> onlinePlayers
+
+New network and thread variables in Player
