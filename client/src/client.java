@@ -1,5 +1,6 @@
-import javax.net.ssl.HandshakeCompletedEvent;
-import javax.net.ssl.HandshakeCompletedListener;
+import myClasses.Player;
+import resources.ResourceClass;
+
 import javax.net.ssl.SSLSocket;
 import javax.net.ssl.SSLSocketFactory;
 import java.io.*;
@@ -17,6 +18,12 @@ public class Client {
     static SSLSocketFactory factory = (SSLSocketFactory) SSLSocketFactory.getDefault();
     static PrintWriter out = null;
     static BufferedReader in = null;
+
+
+    static final String filePath = "playerInfo.xml";
+
+    /* Game Information */
+    static Player player = null;
 
     public static void main(String[] args) {
 
@@ -49,6 +56,9 @@ public class Client {
             System.out.println(in.readLine()); //Result
             out.println("OK");
 
+            writeToFile(in.readLine());
+            generatePlayer(getPath() + filePath);
+            System.out.println(player);
 
         } catch (UnknownHostException e) {
             e.printStackTrace();
@@ -59,6 +69,23 @@ public class Client {
     }
 
 
+    public static String getPath() {
+        return System.getProperty("user.dir") + "\\";
+    }
+
+
+    public static void writeToFile(String playerInfo) {
+
+        try(BufferedWriter bw = new BufferedWriter(new FileWriter(getPath() + filePath))) {
+
+           bw.write(playerInfo);
+
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+    }
 
     public static void getServerIp() {
 
@@ -70,5 +97,9 @@ public class Client {
 
     }
 
+    public static void generatePlayer(String filePath) {
+
+        player = ResourceClass.parsePlayer(filePath);
+    }
 
 }

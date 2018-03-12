@@ -157,10 +157,15 @@ public class Main {
             in = new BufferedReader(new InputStreamReader(currentSocket.getInputStream()));
 
 
-            if(isUserKnown(out, in, username, password)) {
+            Player playerInfo = isUserKnown(out, in, username, password);
+
+            if(playerInfo != null) {
 
                 /* Get Player Info */
                 out.println("Credentials Accepted. Transferring data now...");
+                in.readLine(); //Client 'OK' response
+                out.println("<?xml version=\"1.0\" encoding=\"UTF-8\"?> " + playerInfo.packPlayer().replaceAll("\n", ""));
+
 
             } else {
 
@@ -183,7 +188,7 @@ public class Main {
      * @param password
      * @return Whether or not user credentials are correct
      */
-    private static boolean isUserKnown(PrintWriter out, BufferedReader in, String username, String password) {
+    private static Player isUserKnown(PrintWriter out, BufferedReader in, String username, String password) {
 
         try{
 
@@ -203,9 +208,13 @@ public class Main {
             for(Player p : playerManager) { //INEFFICIENT
 
                 if(p.getUsername().equals(username))
-                    if(p.getPassword() == p.passwordHash(password))
-                        return true;
-                return false;
+                    if(p.getPassword() == p.passwordHash(password)) {
+                        mutex.relinquishPermission();
+                        return p;
+                    }
+
+                mutex.relinquishPermission();
+                return null;
 
             }
 
@@ -214,7 +223,7 @@ public class Main {
             e.printStackTrace();
         }
 
-        return false;
+        return null;
     }
 
 }

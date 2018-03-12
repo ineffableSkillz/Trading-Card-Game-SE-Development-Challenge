@@ -27,8 +27,8 @@
       <file leaf-file-name="Card.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/myClasses/Card.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="440">
-              <caret line="20" column="119" lean-forward="false" selection-start-line="20" selection-start-column="119" selection-end-line="20" selection-end-column="119" />
+            <state relative-caret-position="242">
+              <caret line="11" column="30" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
               <folding>
                 <element signature="method#setRarity#0;class#Card#0" expanded="false" />
               </folding>
@@ -36,38 +36,40 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="CardRarity.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/myEnums/CardRarity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="132">
+              <caret line="6" column="47" lean-forward="true" selection-start-line="6" selection-start-column="47" selection-end-line="6" selection-end-column="47" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="309">
-              <caret line="205" column="67" lean-forward="true" selection-start-line="205" selection-start-column="67" selection-end-line="205" selection-end-column="67" />
+            <state relative-caret-position="152">
+              <caret line="167" column="0" lean-forward="true" selection-start-line="167" selection-start-column="0" selection-end-line="167" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Player.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/myClasses/Player.java">
+      <file leaf-file-name="FileParser.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/database/FileParser.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="286">
-              <caret line="19" column="19" lean-forward="true" selection-start-line="19" selection-start-column="19" selection-end-line="19" selection-end-column="19" />
+            <state relative-caret-position="129">
+              <caret line="208" column="0" lean-forward="false" selection-start-line="208" selection-start-column="0" selection-end-line="208" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="method#toString#0;class#Player#0" expanded="false" />
-                <element signature="method#getCardsToString#0;class#Player#0" expanded="false" />
-                <element signature="method#packPlayer#0;class#Player#0" expanded="false" />
-                <element signature="method#packPlayerCards#0;class#Player#0" expanded="false" />
+                <element signature="method#parseCards#0;class#FileParser#0" expanded="false" />
+                <element signature="method#getRarity#0;class#FileParser#0" expanded="false" />
+                <element signature="e#4625#4626#0" expanded="true" />
+                <element signature="e#4652#4653#0" expanded="true" />
+                <element signature="method#packAllCards#0;class#FileParser#0" expanded="false" />
+                <element signature="method#getCardsOrganisedByRarity#0;class#FileParser#0" expanded="false" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="playerInfo.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/databaseFiles/playerInfo.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="38" lean-forward="false" selection-start-line="0" selection-start-column="38" selection-end-line="0" selection-end-column="38" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -104,11 +106,11 @@
       <list>
         <option value="$PROJECT_DIR$/src/myClasses/Card.java" />
         <option value="$PROJECT_DIR$/src/database/fileParser.java" />
-        <option value="$PROJECT_DIR$/databaseFiles/playerInfo.xml" />
         <option value="$PROJECT_DIR$/src/myEnums/CardRarity.java" />
         <option value="$PROJECT_DIR$/src/database/FileParser.java" />
         <option value="$PROJECT_DIR$/src/resources/MyMutex.java" />
         <option value="$PROJECT_DIR$/src/myClasses/Player.java" />
+        <option value="$PROJECT_DIR$/databaseFiles/playerInfo.xml" />
         <option value="$PROJECT_DIR$/src/Main.java" />
       </list>
     </option>
@@ -119,11 +121,11 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1936" />
-    <option name="height" value="1056" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-1928" />
+    <option name="y" value="136" />
+    <option name="width" value="1552" />
+    <option name="height" value="840" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -143,6 +145,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -164,22 +168,32 @@
               <item name="server" type="b2602c69:ProjectViewProjectNode" />
               <item name="server" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="database" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="server" type="b2602c69:ProjectViewProjectNode" />
+              <item name="server" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="myClasses" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="server" type="b2602c69:ProjectViewProjectNode" />
+              <item name="server" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="myEnums" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
-      <pane id="Scratches" />
       <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../client" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RunDashboard">
@@ -253,14 +267,16 @@
       <workItem from="1520600429230" duration="2536000" />
       <workItem from="1520615739763" duration="2143000" />
       <workItem from="1520620642993" duration="1264000" />
+      <workItem from="1520690826954" duration="2028000" />
+      <workItem from="1520860501706" duration="3516000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="25677000" />
+    <option name="totallyTimeSpent" value="31221000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
+    <frame x="-1928" y="136" width="1552" height="840" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -272,18 +288,18 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3435843" sideWeight="0.50208336" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3435843" sideWeight="0.49791667" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34250343" sideWeight="0.49791667" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20208333" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25195312" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39889959" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Flutter Inspector" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -335,10 +351,141 @@
     </ignored-roots>
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/database/FileParser.java</url>
+          <line>191</line>
+          <properties />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="1" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/databaseFiles/cardList.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="682">
+          <caret line="31" column="4" lean-forward="false" selection-start-line="31" selection-start-column="4" selection-end-line="31" selection-end-column="4" />
+          <folding>
+            <marker date="1520621041478" expanded="true" signature="568:583" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/myClasses/Card.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="11" column="30" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
+          <folding>
+            <element signature="method#setRarity#0;class#Card#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4092">
+          <caret line="205" column="67" lean-forward="false" selection-start-line="205" selection-start-column="67" selection-end-line="205" selection-end-column="67" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/database/FileParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1562">
+          <caret line="158" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="343" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#parseCards#0;class#FileParser#0" expanded="false" />
+            <element signature="method#getRarity#0;class#FileParser#0" expanded="false" />
+            <element signature="e#4625#4626#0" expanded="true" />
+            <element signature="e#4652#4653#0" expanded="true" />
+            <element signature="method#packAllCards#0;class#FileParser#0" expanded="false" />
+            <element signature="method#getCardsOrganisedByRarity#0;class#FileParser#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/myClasses/Player.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="880">
+          <caret line="72" column="23" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="145" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#toString#0;class#Player#0" expanded="false" />
+            <element signature="method#getCardsToString#0;class#Player#0" expanded="false" />
+            <element signature="method#packPlayerCards#0;class#Player#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/databaseFiles/playerInfo.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="38" lean-forward="false" selection-start-line="0" selection-start-column="38" selection-end-line="0" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/myEnums/CardRarity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="12" column="39" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/databaseFiles/cardList.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="682">
+          <caret line="31" column="4" lean-forward="false" selection-start-line="31" selection-start-column="4" selection-end-line="31" selection-end-column="4" />
+          <folding>
+            <marker date="1520621041478" expanded="true" signature="568:583" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/myClasses/Card.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="440">
+          <caret line="20" column="119" lean-forward="false" selection-start-line="20" selection-start-column="119" selection-end-line="20" selection-end-column="119" />
+          <folding>
+            <element signature="method#setRarity#0;class#Card#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/myClasses/Player.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="19" column="19" lean-forward="true" selection-start-line="19" selection-start-column="19" selection-end-line="19" selection-end-column="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#toString#0;class#Player#0" expanded="false" />
+            <element signature="method#getCardsToString#0;class#Player#0" expanded="false" />
+            <element signature="method#packPlayerCards#0;class#Player#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/databaseFiles/playerInfo.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="38" lean-forward="false" selection-start-line="0" selection-start-column="38" selection-end-line="0" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4092">
+          <caret line="205" column="67" lean-forward="true" selection-start-line="205" selection-start-column="67" selection-end-line="205" selection-end-column="67" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/databaseFiles/cardList.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="682">
@@ -367,7 +514,6 @@
             <element signature="imports" expanded="true" />
             <element signature="method#toString#0;class#Player#0" expanded="false" />
             <element signature="method#getCardsToString#0;class#Player#0" expanded="false" />
-            <element signature="method#packPlayer#0;class#Player#0" expanded="false" />
             <element signature="method#packPlayerCards#0;class#Player#0" expanded="false" />
           </folding>
         </state>
@@ -423,13 +569,10 @@
           <caret line="18" column="27" lean-forward="false" selection-start-line="18" selection-start-column="27" selection-end-line="18" selection-end-column="27" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#getDocument#0;class#FileParser#0" expanded="false" />
             <element signature="method#parseCards#0;class#FileParser#0" expanded="false" />
             <element signature="method#getRarity#0;class#FileParser#0" expanded="false" />
             <element signature="e#4625#4626#0" expanded="true" />
             <element signature="e#4652#4653#0" expanded="true" />
-            <element signature="method#parsePlayers#0;class#FileParser#0" expanded="false" />
-            <element signature="method#packAllPlayers#0;class#FileParser#0" expanded="false" />
             <element signature="method#packAllCards#0;class#FileParser#0" expanded="false" />
             <element signature="method#getCardsOrganisedByRarity#0;class#FileParser#0" expanded="false" />
           </folding>
@@ -468,13 +611,10 @@
           <caret line="225" column="71" lean-forward="false" selection-start-line="225" selection-start-column="71" selection-end-line="225" selection-end-column="71" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#getDocument#0;class#FileParser#0" expanded="false" />
             <element signature="method#parseCards#0;class#FileParser#0" expanded="false" />
             <element signature="method#getRarity#0;class#FileParser#0" expanded="false" />
             <element signature="e#4625#4626#0" expanded="true" />
             <element signature="e#4652#4653#0" expanded="true" />
-            <element signature="method#parsePlayers#0;class#FileParser#0" expanded="false" />
-            <element signature="method#packAllPlayers#0;class#FileParser#0" expanded="false" />
             <element signature="method#packAllCards#0;class#FileParser#0" expanded="false" />
             <element signature="method#getCardsOrganisedByRarity#0;class#FileParser#0" expanded="false" />
           </folding>
@@ -515,7 +655,6 @@
             <element signature="imports" expanded="true" />
             <element signature="method#toString#0;class#Player#0" expanded="false" />
             <element signature="method#getCardsToString#0;class#Player#0" expanded="false" />
-            <element signature="method#packPlayer#0;class#Player#0" expanded="false" />
             <element signature="method#packPlayerCards#0;class#Player#0" expanded="false" />
           </folding>
         </state>
@@ -527,13 +666,10 @@
           <caret line="73" column="0" lean-forward="false" selection-start-line="73" selection-start-column="0" selection-end-line="73" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#getDocument#0;class#FileParser#0" expanded="false" />
             <element signature="method#parseCards#0;class#FileParser#0" expanded="false" />
             <element signature="method#getRarity#0;class#FileParser#0" expanded="false" />
             <element signature="e#4625#4626#0" expanded="true" />
             <element signature="e#4652#4653#0" expanded="true" />
-            <element signature="method#parsePlayers#0;class#FileParser#0" expanded="false" />
-            <element signature="method#packAllPlayers#0;class#FileParser#0" expanded="false" />
             <element signature="method#packAllCards#0;class#FileParser#0" expanded="false" />
             <element signature="method#getCardsOrganisedByRarity#0;class#FileParser#0" expanded="false" />
           </folding>
@@ -572,13 +708,10 @@
           <caret line="31" column="0" lean-forward="false" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#getDocument#0;class#FileParser#0" expanded="false" />
             <element signature="method#parseCards#0;class#FileParser#0" expanded="false" />
             <element signature="method#getRarity#0;class#FileParser#0" expanded="false" />
             <element signature="e#4625#4626#0" expanded="true" />
             <element signature="e#4652#4653#0" expanded="true" />
-            <element signature="method#parsePlayers#0;class#FileParser#0" expanded="false" />
-            <element signature="method#packAllPlayers#0;class#FileParser#0" expanded="false" />
             <element signature="method#packAllCards#0;class#FileParser#0" expanded="false" />
             <element signature="method#getCardsOrganisedByRarity#0;class#FileParser#0" expanded="false" />
           </folding>
@@ -599,13 +732,10 @@
           <caret line="23" column="20" lean-forward="true" selection-start-line="23" selection-start-column="20" selection-end-line="23" selection-end-column="20" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#getDocument#0;class#FileParser#0" expanded="false" />
             <element signature="method#parseCards#0;class#FileParser#0" expanded="false" />
             <element signature="method#getRarity#0;class#FileParser#0" expanded="false" />
             <element signature="e#4625#4626#0" expanded="true" />
             <element signature="e#4652#4653#0" expanded="true" />
-            <element signature="method#parsePlayers#0;class#FileParser#0" expanded="false" />
-            <element signature="method#packAllPlayers#0;class#FileParser#0" expanded="false" />
             <element signature="method#packAllCards#0;class#FileParser#0" expanded="false" />
             <element signature="method#getCardsOrganisedByRarity#0;class#FileParser#0" expanded="false" />
           </folding>
@@ -638,11 +768,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/myEnums/CardRarity.java">
+    <entry file="file://$PROJECT_DIR$/src/resources/MyMutex.java" />
+    <entry file="file://$PROJECT_DIR$/src/myClasses/Card.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="242">
+          <caret line="11" column="30" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
+          <folding>
+            <element signature="method#setRarity#0;class#Card#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -652,36 +785,6 @@
           <caret line="31" column="4" lean-forward="false" selection-start-line="31" selection-start-column="4" selection-end-line="31" selection-end-column="4" />
           <folding>
             <marker date="1520621041478" expanded="true" signature="568:583" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/resources/MyMutex.java" />
-    <entry file="file://$PROJECT_DIR$/src/myClasses/Card.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="20" column="119" lean-forward="false" selection-start-line="20" selection-start-column="119" selection-end-line="20" selection-end-column="119" />
-          <folding>
-            <element signature="method#setRarity#0;class#Card#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/database/FileParser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="35" column="18" lean-forward="true" selection-start-line="35" selection-start-column="18" selection-end-line="35" selection-end-column="18" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#getDocument#0;class#FileParser#0" expanded="false" />
-            <element signature="method#parseCards#0;class#FileParser#0" expanded="false" />
-            <element signature="method#getRarity#0;class#FileParser#0" expanded="false" />
-            <element signature="e#4625#4626#0" expanded="true" />
-            <element signature="e#4652#4653#0" expanded="true" />
-            <element signature="method#parsePlayers#0;class#FileParser#0" expanded="false" />
-            <element signature="method#packAllPlayers#0;class#FileParser#0" expanded="false" />
-            <element signature="method#packAllCards#0;class#FileParser#0" expanded="false" />
-            <element signature="method#getCardsOrganisedByRarity#0;class#FileParser#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -696,22 +799,45 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/myClasses/Player.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="19" column="19" lean-forward="true" selection-start-line="19" selection-start-column="19" selection-end-line="19" selection-end-column="19" />
+        <state relative-caret-position="210">
+          <caret line="59" column="30" lean-forward="false" selection-start-line="59" selection-start-column="30" selection-end-line="59" selection-end-column="30" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#toString#0;class#Player#0" expanded="false" />
             <element signature="method#getCardsToString#0;class#Player#0" expanded="false" />
-            <element signature="method#packPlayer#0;class#Player#0" expanded="false" />
             <element signature="method#packPlayerCards#0;class#Player#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/database/FileParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="129">
+          <caret line="208" column="0" lean-forward="false" selection-start-line="208" selection-start-column="0" selection-end-line="208" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#parseCards#0;class#FileParser#0" expanded="false" />
+            <element signature="method#getRarity#0;class#FileParser#0" expanded="false" />
+            <element signature="e#4625#4626#0" expanded="true" />
+            <element signature="e#4652#4653#0" expanded="true" />
+            <element signature="method#packAllCards#0;class#FileParser#0" expanded="false" />
+            <element signature="method#getCardsOrganisedByRarity#0;class#FileParser#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/myEnums/CardRarity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="6" column="47" lean-forward="true" selection-start-line="6" selection-start-column="47" selection-end-line="6" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="309">
-          <caret line="205" column="67" lean-forward="true" selection-start-line="205" selection-start-column="67" selection-end-line="205" selection-end-column="67" />
+        <state relative-caret-position="152">
+          <caret line="167" column="0" lean-forward="true" selection-start-line="167" selection-start-column="0" selection-end-line="167" selection-end-column="0" />
           <folding />
         </state>
       </provider>
