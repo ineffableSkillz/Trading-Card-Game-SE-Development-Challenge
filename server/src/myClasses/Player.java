@@ -1,5 +1,8 @@
 package myClasses;
 
+import java.io.BufferedReader;
+import java.io.PrintWriter;
+import java.net.Socket;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -12,6 +15,15 @@ public class Player {
     private HashMap<Card, Integer> ownedCards = null;
 
     private double money = 0.0;
+
+
+    private Socket socket = null;
+    private BufferedReader br = null;
+    private PrintWriter pw = null;
+
+    private Runnable run = null;
+    private Thread cmdThread = null;
+
 
 
     public Player(String usr, Integer pass, double dosh, HashMap<Card, Integer> cardList) {
@@ -111,6 +123,16 @@ public class Player {
 
     /* Setters and Getters */
 
+    public void addCommunicationInfo(Socket currentSocket, BufferedReader in, PrintWriter out, Runnable run, Thread cmdThread) {
+
+        setSocket(currentSocket);
+        setReader(in);
+        setWriter(out);
+        setRunnable(run);
+        setThread(cmdThread);
+
+    }
+
     public String getUsername() {
         return username;
     }
@@ -141,5 +163,37 @@ public class Player {
 
     public void incMoney(double money) {
         this.money += money;
+    }
+
+    public Socket getSocket() {
+        return socket;
+    }
+
+    public void setSocket(Socket socket) {
+        this.socket = socket;
+    }
+
+    public BufferedReader getReader() {
+        return br;
+    }
+
+    public void setReader(BufferedReader br) {
+        this.br = br;
+    }
+
+    public PrintWriter getWriter() {
+        return pw;
+    }
+
+    public void setWriter(PrintWriter pw) {
+        this.pw = pw;
+    }
+
+    public void setRunnable(Runnable runnable) {
+        this.run = runnable;
+    }
+
+    public void setThread(Thread t) {
+        this.cmdThread = t;
     }
 }

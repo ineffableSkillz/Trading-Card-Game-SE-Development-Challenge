@@ -22,13 +22,15 @@ public class Main {
     private static HashMap<Card, Integer> cardManager;
     private static ArrayList<Player> playerManager; //Need to re-consider player structure (inefficient during login)
     private static ArrayList<Card> cardMarket;
+    private static ArrayList<Player> onlinePlayers = new ArrayList<>();
+
 
     private static final int portno = 34512;
     private static final int backlog = 10;
     private static InetAddress serverAddr = null;
 
     /**
-     * Accepts incoming connections and asks for loging details
+     * Accepts incoming connections and asks for login details
      */
     static class AcceptThread implements Runnable {
 
@@ -43,6 +45,49 @@ public class Main {
         public AcceptThread(SSLServerSocket s) {
             socket = s;
         }
+    }
+
+    /**
+     * Class to represent a communication between the server and the client
+     */
+    static class CommunicationThread implements Runnable {
+
+        private Socket socket;
+        private BufferedReader in;
+        private PrintWriter out;
+        private Player player;
+
+        @Override
+        public void run() {
+            while(true) {
+
+            }
+        }
+
+        public CommunicationThread(Socket s, BufferedReader in, PrintWriter out, Player p) {
+            socket = s;
+            this.in = in;
+            this.out = out;
+            player = p;
+        }
+
+
+    }
+
+    /**
+     * Class/Thread to remove closed connections
+     */
+    static class CheckVoidConnectionThread implements Runnable {
+
+        @Override
+        public void run() {
+
+        }
+    }
+
+
+    public static boolean isConnectionStillActive(CommunicationThread t) {
+        return t.socket.isConnected();
     }
 
     public static void main(String[] args) {
@@ -165,6 +210,14 @@ public class Main {
                 out.println("Credentials Accepted. Transferring data now...");
                 in.readLine(); //Client 'OK' response
                 out.println("<?xml version=\"1.0\" encoding=\"UTF-8\"?> " + playerInfo.packPlayer().replaceAll("\n", ""));
+
+
+                Runnable run = new CommunicationThread(currentSocket, in, out, playerInfo);
+                Thread cmdThread = new Thread(run);
+                cmdThread.start();
+
+                playerInfo.addCommunicationInfo(currentSocket, in, out, run, cmdThread);
+                onlinePlayers.add(playerInfo);
 
 
             } else {

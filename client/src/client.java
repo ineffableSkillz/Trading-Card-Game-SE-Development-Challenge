@@ -30,7 +30,7 @@ public class Client {
         //getServerIp();
 
         connectToHost();
-
+        while(true);
     }
 
     private static void connectToHost() {
