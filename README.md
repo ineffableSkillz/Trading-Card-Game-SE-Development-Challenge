@@ -51,3 +51,8 @@ Project Setup:
 - Client program started
 - Client can connect to server and authenticate
 - **need to find a way to transfer player object**
+
+### Hour 8:07 - Beam me up (over), Scotty!
+- Player object transferred successfully
+- Info is written to a file and re-opened.
+- Spent an hour trying to solve a problem due to a missing 'return'. If time, will try without writing to file
