@@ -66,3 +66,11 @@ New Data Structure:
 - ArrayList<Player> onlinePlayers
 
 New network and thread variables in Player
+
+### Hour 10:06 - C&C Server, do you copy?
+- Creating text-based menu for users to choose which action (Will do some cline-side logic before approaching socket communication)
+- Methods fully implemented client-side
+- ParseCards method implemented (view javadocs for more info)
+- Fixed issue with multiple scanners, even after closed with try with resources
+- Made template in thread within Server.
+
